@@ -69,6 +69,7 @@ class RefreshLocalizations {
   Map<String, RefreshString> values = {
     'en': EnRefreshString(),
     'zh': ChRefreshString(),
+    'th': ThRefreshString(),
     'fr': FrRefreshString(),
     'ru': RuRefreshString(),
     'uk': UkRefreshString(),
@@ -106,6 +107,7 @@ class RefreshLocalizationsDelegate
     return [
       'en',
       'zh',
+      'th',
       'fr',
       'ru',
       'uk',
@@ -202,6 +204,42 @@ class ChRefreshString implements RefreshString {
 
   @override
   String? refreshingText = "刷新中…";
+}
+
+/// Thailand
+class ThRefreshString implements RefreshString {
+  @override
+  String? canLoadingText = "ปล่อยและเริ่มโหลดข้อมูล";
+
+  @override
+  String? canRefreshText = "ปล่อยและเริ่มรีเฟรชข้อมูล";
+
+  @override
+  String? canTwoLevelText = "ปล่อยและเข้าหน้าใหม่";
+
+  @override
+  String? idleLoadingText = "เลื่อขึ้นโหลด";
+
+  @override
+  String? idleRefreshText = "เลื่อลงรีเฟรช";
+
+  @override
+  String? loadFailedText = "โหลดไม่สำเร็จ";
+
+  @override
+  String? loadingText = "กำลังโหลด...";
+
+  @override
+  String? noMoreText = "ไม่มีข้อมูลอีกต่อไป";
+
+  @override
+  String? refreshCompleteText = "รีเฟรชสำเร็จ";
+
+  @override
+  String? refreshFailedText = "รีเฟรชไม่สำเร็จ";
+
+  @override
+  String? refreshingText = "กำลังรีเฟรช";
 }
 
 /// English
